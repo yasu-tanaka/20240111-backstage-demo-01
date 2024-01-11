@@ -11,6 +11,6 @@ metadata:
       url: https://backstage.spklab-isd.com/docs/default/Component/apisix
 spec:
   type: API
-  owner: Team DevOps
+  owner: group:default/team-devops
   lifecycle: experimental
   system: isd-system
