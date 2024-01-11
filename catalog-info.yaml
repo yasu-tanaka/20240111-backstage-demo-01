@@ -15,8 +15,6 @@ spec:
   owner: group:default/team-devops
   lifecycle: experimental
   system: isd-system
-  providesApis: artist-api
-  consumesApis: artist-api
   definition: |
     openapi: "3.0.0"
     info:
