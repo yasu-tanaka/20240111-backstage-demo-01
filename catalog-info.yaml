@@ -10,12 +10,12 @@ metadata:
     - title: Documentation
       url: https://backstage.spklab-isd.com/docs/default/Component/apisix
 spec:
-  type: API
+  type: openapi
   owner: group:default/team-devops
   lifecycle: experimental
   system: isd-system
   definition: |
-    openapi: "1.0.0"
+    openapi: "3.0.0"
     info:
       version: 1.0.0
       title: Ministry of Economy, Trade and Industry API
