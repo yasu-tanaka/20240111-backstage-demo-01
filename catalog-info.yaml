@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: API_gbiz
+  tags: APISIX
   description: |
     APISIXにある、経済産業省gbiz API
   links:
@@ -19,3 +20,6 @@ spec:
     info:
       version: 1.0.0
       title: Ministry of Economy, Trade and Industry API
+    servers:
+      - url: https://api.spklab-isd.com/gbiz
+      
