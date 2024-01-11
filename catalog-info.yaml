@@ -9,8 +9,6 @@ metadata:
       url: https://mgmt.api.spklab-isd.com
     - title: Documentation
       url: https://backstage.spklab-isd.com/docs/default/Component/apisix
-  annotations:
-    APISIX_website-url: https://mgmt.api.spklab-isd.com
 spec:
   type: library
   owner: tanaka
