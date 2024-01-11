@@ -14,3 +14,4 @@ spec:
   owner: group:default/team-devops
   lifecycle: experimental
   system: isd-system
+  definition: APISIX
