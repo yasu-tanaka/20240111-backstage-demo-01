@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: API_gbiz
-  tags: ["APISIX"]
+  tags: ['recommended', 'react']
   description: |
     APISIXにある、経済産業省gbiz API
   links:
