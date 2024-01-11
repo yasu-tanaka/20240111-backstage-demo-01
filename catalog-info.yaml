@@ -14,4 +14,8 @@ spec:
   owner: group:default/team-devops
   lifecycle: experimental
   system: isd-system
-  definition: APISIX
+  definition: |
+    openapi: "1.0.0"
+    info:
+      version: 1.0.0
+      title: Ministry of Economy, Trade and Industry API
