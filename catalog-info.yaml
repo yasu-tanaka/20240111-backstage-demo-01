@@ -5,11 +5,12 @@ metadata:
   description: |
     APISIXにある、経済産業省gbiz API
   links:
-    - title: Website
+    - title: Management
       url: https://mgmt.api.spklab-isd.com
     - title: Documentation
       url: https://backstage.spklab-isd.com/docs/default/Component/apisix
 spec:
-  type: library
-  owner: tanaka
+  type: API
+  owner: Team DevOps
   lifecycle: experimental
+  system: isd-system
