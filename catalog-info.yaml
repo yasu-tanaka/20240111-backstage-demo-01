@@ -15,5 +15,11 @@ spec:
   owner: group:default/team-devops
   lifecycle: experimental
   system: isd-system
-  definition:
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Ministry of Echonomy, Trade and Industry API
+    servers:
+      - url: https://api.spklab-isd.com/gbiz
     $openapi: ./APISIX_routes_20240125144124.yaml
