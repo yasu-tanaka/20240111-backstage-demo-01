@@ -22,4 +22,5 @@ spec:
       title: Ministry of Economy, Trade and Industry API
     servers:
       - url: https://api.spklab-isd.com/gbiz
+  　$openapi: ./APISIX_routes_20240125144124.yaml
       
