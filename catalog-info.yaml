@@ -22,4 +22,4 @@ spec:
       title: Ministry of Echonomy, Trade and Industry API
     servers:
       - url: https://api.spklab-isd.com/gbiz
-    $openapi: ./APISIX_routes_20240125144124.yaml
+    $openapi: https://github.com/yasu-tanaka/20240111-backstage-demo-01/APISIX_routes_20240125144124.yaml
