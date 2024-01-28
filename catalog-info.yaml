@@ -15,9 +15,6 @@ spec:
   owner: group:default/team-devops
   lifecycle: experimental
   system: isd-system
-  securityDefinitions:
-　　  basicAuth:
-  　　  type: basic
   definition: |
     openapi: "3.0.0"
     info:
@@ -52,5 +49,4 @@ spec:
          responses:
            200:
              description: Success
-     　　　　　　 security:
-       　　　　 - basicAuth: []
+             
