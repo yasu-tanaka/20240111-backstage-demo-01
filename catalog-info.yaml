@@ -16,10 +16,36 @@ spec:
   lifecycle: experimental
   system: isd-system
   definition: |
-    title: RoutesExport
-    version: 3.0.0
-    openapi: 3.0.0
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+    title: Ministry of Economy, Trade and Industry API
+    servers:
+      - url: https://api.spklab-isd.com/gbiz
     paths:
-      /gbiz:
+      /gbiz?corporate_number={corporate_num}&page={page_num}&limit={limit}:
        get:
          operationId: 20231205_経済産業省gBizINFOGET
+         summary: Get a user
+         parameters:
+           - in: path
+             name: corporate_num
+             required: true
+             description: 法人番号
+             schema:
+               type: integer
+           - in: path
+             name: page_num
+             required: true
+             description: 1ページの表示数
+             schema:
+               type: integer
+           - in: path
+             name: limit
+             required: true
+             description: APIでのLimit数
+             schema:
+               type: integer
+         responses:
+           200:
+             description: Success
