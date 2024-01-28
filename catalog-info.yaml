@@ -23,28 +23,50 @@ spec:
     servers:
       - url: https://api.spklab-isd.com/gbiz
     paths:
-      /?corporate_number={corporate_num}&page={page_num}&limit={limit}:
-      get:
-        summary: Get a user
-        parameters:
-          - in: path
-            name: corporate_num
-            required: true
-            description: 法人番号
-            schema:
-              type: integer
-          - in: path
-            name: page_num
-            required: true
-            description: 1ページの表示数
-            schema:
-              type: integer
-          - in: path
-            name: limit
-            required: true
-            description: APIでのLimit数
-            schema:
-              type: integer
-        responses:
-          200:
-            description: Success
+      /gbiz:
+       get:
+         operationId: 20231205_経済産業省gBizINFOGET
+         requestBody: {}
+         responses:
+           default:
+             description: ''
+         security:
+           - basicAuth:
+               - ' '
+         x-apisix-enable_websocket: false
+         x-apisix-id: '490400693606155661'
+         x-apisix-plugins:
+           consumer-restriction:
+             _meta:
+               disable: false
+             whitelist:
+               - aiba
+           ip-restriction:
+             _meta:
+               disable: false
+             blacklist:
+               - 39.110.203.194
+               - 122.220.66.182
+           proxy-rewrite:
+             headers:
+               X-hojinInfo-api-token: skDuVidg053dTjOfrgOWEAC5Ty5BvF6x
+             uri: /hojin/v1/hojin
+         x-apisix-priority: 0
+         x-apisix-status: 1
+         x-apisix-upstream:
+           nodes:
+             - host: info.gbiz.go.jp
+               port: 443
+               weight: 1
+           timeout:
+             connect: 6
+             send: 6
+             read: 6
+           type: roundrobin
+           scheme: https
+           pass_host: pass
+           keepalive_pool:
+             idle_timeout: 60
+             requests: 1000
+             size: 320
+
