@@ -23,7 +23,7 @@ spec:
     servers:
       - url: https://api.spklab-isd.com/gbiz
     paths:
-      /gbiz:
+      /?corporate_number={corporate_num}&page={page_num}&limit={limit}:
       get:
         summary: Get a user
         parameters:
