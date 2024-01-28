@@ -15,7 +15,7 @@ spec:
   owner: group:default/team-devops
   lifecycle: experimental
   system: isd-system
-　　 definition: |
+  definition: |
     openapi: "3.0.0"
     info:
       version: 1.0.0
@@ -23,7 +23,7 @@ spec:
     servers:
       - url: https://api.spklab-isd.com/gbiz
     paths:
-      /gbiz?corporate_number={corporate_num}&page=1&limit=1000:
+      /gbiz?corporate_number={corporate_num}&page={page_num}&limit={limit}:
       get:
         summary: Get a user
         parameters:
@@ -31,6 +31,18 @@ spec:
             name: corporate_num
             required: true
             description: 法人番号
+            schema:
+              type: integer
+          - in: path
+            name: page_num
+            required: true
+            description: 1ページの表示数
+            schema:
+              type: integer
+          - in: path
+            name: limit
+            required: true
+            description: APIでのLimit数
             schema:
               type: integer
         responses:
