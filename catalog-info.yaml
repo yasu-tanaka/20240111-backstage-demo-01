@@ -49,3 +49,6 @@ spec:
          responses:
            200:
              description: Success
+        　securityDefinitions:
+ 　　　　　　　　　　　 　　　　- basicAuth:
+          　　　type: basic
