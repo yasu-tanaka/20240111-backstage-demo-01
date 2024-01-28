@@ -21,7 +21,7 @@ spec:
       version: 1.0.0
     title: Ministry of Economy, Trade and Industry API
     servers:
-      - url: https://api.spklab-isd.com/gbiz
+      - url: https://api.spklab-isd.com/
     paths:
       /gbiz?corporate_number={corporate_num}&page={page_num}&limit={limit}:
        get:
